@@ -38,7 +38,8 @@
                 <!-- Single Product Card (Repeat this block for each product) -->
                 <div class="col">
                     <div class="card h-200">
-                        <img src="{{ asset('Image/aaachi.jpg') }}" class="card-img-top" alt="Saffola Masala Oats">
+                        <img src="{{ asset('Image/aaachi.jp
+                        g') }}" class="card-img-top" alt="Saffola Masala Oats">
                         <div class="card-body">
                             <h6 class="card-title">Saffola Masala Oats Veggie Twist 500g</h6>
                             <p class="card-text">$8</p>

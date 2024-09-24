@@ -986,4 +986,30 @@ form .btn-primary{
     table {
         width: 100%;
     }
+    .heading {
+        background-image: url('../Image/privacy.jpg'); /* Replace with your image path */
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        color: white;
+        display:block;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        padding: 50px;
 
+    }
+    .heading h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .toc {
+        position: sticky;
+        top: 20px;
+    }
+    .content img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
