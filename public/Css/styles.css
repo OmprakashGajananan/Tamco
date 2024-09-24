@@ -1,0 +1,989 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    color: #000000;
+}
+.header{
+    color: white;
+    padding: 10px;
+}
+/* Ensure the navbar is positioned */
+.navbar {
+    position: static;
+    left: 0;
+    background-color: rgb(7, 39, 73); /* Semi-transparent dark blue */
+    backdrop-filter: blur(80%); /* Blur effect */
+    z-index: 1000; /* Ensure the navbar is above other elements */
+    border-radius: 0 0 10px 10px;
+}
+
+/* Link Styling */
+.navbar-nav .nav-link {
+    position: relative;
+    color: #f1f1f1; /* Light text color for better contrast */
+    font-size: large;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth color and background transition */
+    margin-right: 10px; /* Adds a gap between each link */
+}
+
+/* Link Hover Styling */
+.navbar-nav .nav-link:hover {
+    color: #f80505; /* Change text color on hover */
+    border-radius: 5px; /* Optional: Add a rounded corner effect */
+}
+
+/* Pseudo-element for underline effect */
+.navbar-nav .nav-link::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: 2px;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* Hover state to animate the underline */
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+        backdrop-filter: none; /* Optional: Remove blur on small screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide links on small screens */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar-toggler {
+        display: block; /* Show toggler button on small screens */
+    }
+}
+
+
+.btn-primary {
+    background-color: #2c11c5;
+    border: none;
+}
+
+.btn-outline{
+    color: #fdfdfd;
+    border-color: #f4f4f5;
+}
+
+.btn-outline:hover {
+    background-color:  #1220e4;
+    color: #fff;
+}
+.btn-outline-dark {
+    color: #0a21f1;
+    border-color: #0a21f1;
+}
+
+.btn-outline-dark:hover {
+    background-color:  #1220e4;
+    color: #fff;
+}
+
+.dropdown-toggle {
+    width: 100%;
+    text-align: left;
+}
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Adjust the spacing between the input and button */
+}
+
+.dropdown-itemCard {
+    width: 100px; /* Adjust the width as needed */
+    height: 30px; /* Ensure height matches width for a perfect circle */
+    background-color: #e7dede; /* Change this to your desired color */
+    border: 1px solid #ccc; /* Optional: add a border for better visibility */
+    padding: 4px;
+    border-radius: 5px; /* Makes the input circular */
+    text-align: center; /* Center text inside the input */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
+.dropdown-menu {
+    width: 100%;
+}
+
+.search-bar-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px; /* Space between logo and search bar */
+}
+
+/* Adjusted search bar */
+.search-bar {
+    width: 50%; /* Adjust the width of the search bar */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+
+/*carousel items  */
+.carousel-item {
+    height:auto; /* Default height for carousel items */
+    position: relative; /* Ensures captions and overlays work well */
+}
+
+.carousel-item img {
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the entire area */
+    filter: brightness(50%); /* Darkens the image to make text pop */
+    transition: transform 0.5s ease; /* Smooth image transition on slide */
+}
+
+.carousel-item:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+@media (min-width: 992px) { /* For large screens */
+    .carousel-item {
+        height: 700px;
+    }
+}
+
+@media (max-width: 768px) { /* For small screens */
+    .carousel-item {
+        height: 300px;
+    }
+}
+/* Icon Size and Alignment */
+.size-6 {
+    width: 30px;
+    height: 30px;
+}
+
+.d-flex.align-items-center svg {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+a {
+    color: #ffffff; /* Link color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f80505; /* Hover color */
+}
+
+
+/* Style the captions */
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to text for readability */
+    padding: 0 15px;
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    display: block; /* Ensure paragraph is always displayed */
+}
+
+.banner-container {
+    text-align: center; /* Centers the image horizontally */
+
+}
+.banner-container img{
+    margin-top: 5%;
+}
+@media (max-width: 768px) {
+    .carousel-caption {
+        bottom: 10%; /* Adjust caption position for smaller screens */
+        left: 5%;
+        right: 5%;
+        padding: 0 10px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5rem; /* Reduce heading size for smaller screens */
+    }
+
+    .carousel-caption p {
+        font-size: 1rem; /* Reduce paragraph size for smaller screens */
+        display: block; /* Ensure paragraph stays visible */
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption {
+        bottom: 5%; /* Further adjust caption position for very small screens */
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.2rem; /* Reduce heading size further on extra small screens */
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem; /* Reduce paragraph size on extra small screens */
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the control icons */
+    border-radius: 50%; /* Make the icons circular */
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%; /* Keep the control buttons narrow */
+}
+
+
+
+/* Card Styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 10px;
+    margin-bottom: 30px; /* Increased margin for spacing between cards */
+    position: relative; /* For overlay effect */
+    overflow: hidden; /* Hide overflow for the blur effect */
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+}
+
+.card-body h6 {
+    font-size: 16px;
+    color: #333;
+}
+
+.card-footer {
+    background-color: #fff;
+}
+/* Media Query for smaller screens */
+@media (max-width: 767px) {
+    .card {
+        width: 100%; /* Make the card full width on smaller screens */
+        max-width: 300px; /* Set a max width to keep it medium size */
+        margin: 0 auto; /* Center the card */
+    }
+}
+
+
+
+.next .icon {
+    width: 60px; /* Set width */
+    height: 60px; /* Set height */
+    transition: transform 0.3s ease, fill 0.3s ease; /* Smooth transition for hover effects */
+    margin: 30px;
+}
+
+.next:hover .icon {
+    transform: scale(1.1); /* Slightly increase the size on hover */
+    stroke: #6c6c72; /* Change the fill color on hover */
+
+}
+
+
+
+
+/* Custom Styles for Testimonials and Brands Section */
+.star-rating {
+    color: #fcd303;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.brand-logo {
+    max-height: 50px; /* Adjust based on your actual brand logo sizes */
+    padding: 5px 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+.sidebar h5, .sidebar h6 {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Adjust Input Range Thumb */
+input[type=range]::-webkit-slider-thumb {
+    background-color: #007bff;
+}
+
+/* Button Styling */
+.btn-danger {
+    background-color: #ff6b6b;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #0a0a0a;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-bottom: 20px;
+    }
+
+    .brand-logo {
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 150px;
+    }
+}
+
+/* Specific Styles for Sections */
+.new-arrivals {
+    margin-top: 80px; /* Adjust the value as needed */
+}
+
+.special-arrivals {
+    margin-top: 80px;
+}
+
+@media (min-width: 992px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        display: none;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+    }
+
+    .btn-outline-dark {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+/* Footer Section Styles */
+/* Footer Section Styles */
+footer {
+    padding: 40px; /* Adjust padding top and bottom as needed */
+    background-color: #ecebeb; /* Set background color to black */
+    color: #000000; /* Adjust text color for visibility */
+}
+
+footer h4,
+footer h5 {
+    font-weight: bold;
+    color: #000000; /* Text color for headings */
+}
+
+footer p,
+footer .text-muted,
+footer .d-block,
+footer .list-unstyled a {
+    color: #000000; /* Adjust text color for visibility */
+}
+
+footer .btn-primary {
+    background-color: #7F58AF; /* Primary button color */
+    border: none;
+}
+
+footer .list-unstyled a:hover {
+    color: #F57224;
+}
+
+/* Responsive padding and gap adjustments */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 0;
+    }
+
+    .form-control {
+        max-width: 100%;
+    }
+}
+
+
+/* Additional styling for alignment */
+form.d-flex {
+    align-items: center; /* Align items vertically in the form */
+    gap: 10px; /* Add gap between form elements */
+}
+
+form .form-control {
+    margin-right: 1rem;
+}
+
+form .btn-primary {
+    margin-top: 0;
+}
+
+footer .text-center {
+    text-align: center;
+}
+
+
+/* Container-About */
+.container-About {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    align-items: center; /* Center items vertically */
+    padding: 20px;
+    gap: 20px; /* Space between image and text */
+}
+
+
+/* Image section */
+.container-About .image {
+    flex: 1 1 300px; /* Grow and shrink with a base width of 300px */
+    text-align: left;
+    padding: 70px; /* Align text within the image section */
+}
+
+.container-About .image img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Adjust max-width as needed */
+}
+
+/* Contents section */
+.container-About .contents {
+    flex: 2 1 600px; /* Grow and shrink with a base width of 600px */
+    max-width: 600px; /* Adjust max width of contents */
+    padding: 20px;
+}
+
+.container-About .contents h5 {
+    font-size: 1.5rem; /* Font size for h5 */
+}
+
+.container-About .contents h1 {
+    font-size: 2.5rem; /* Font size for h1 */
+}
+
+.container-About .contents p {
+    font-size: 1rem; /* Font size for p */
+    margin: 20px 0;
+    text-align: justify; /* Justify the paragraph text */
+}
+
+.container-About .contents .btn-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    width: 100%; /* Ensure it takes up full width */
+}
+
+.container-About .contents .btn {
+    margin: 10px 5px; /* Space between buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .container-About {
+        flex-direction: column; /* Stack items vertically on medium screens */
+        text-align: center; /* Center text in contents section */
+    }
+
+    .container-About .image,
+    .container-About .contents {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Ensure full width */
+    }
+
+    .container-About .image img {
+        max-width: 100%; /* Full width for image */
+    }
+}
+
+@media (max-width: 768px) {
+    .container-About .contents h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .container-About .contents h5 {
+        font-size: 1.25rem; /* Adjust font size for smaller screens */
+    }
+
+    .container-About .contents p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .container-About .contents h1 {
+        font-size: 1.5rem; /* Adjust font size for extra small screens */
+    }
+
+    .container-About .contents h5 {
+        font-size: 1rem; /* Adjust font size for extra small screens */
+    }
+
+    .container-About .contents p {
+        font-size: 0.85rem; /* Adjust font size for extra small screens */
+    }
+}
+
+  .product-section {
+    margin-top: 5%;
+    padding: 40px 0;
+  }
+  .product-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .product-price {
+    font-size: 1.5rem;
+    color: #28a745;
+    margin-bottom: 10px;
+  }
+  .availability {
+    font-size: 1rem;
+    color: #dc3545;
+    margin-bottom: 20px;
+  }
+  .add-to-cart-btn {
+    margin-bottom: 20px;
+  }
+  .reviews-section {
+    padding: 40px 0;
+  }
+  .review-card {
+    border: 1px solid #f0f0f0;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .related-products-section {
+    padding: 40px 0;
+  }
+  .related-products h3 {
+    margin-bottom: 30px;
+  }
+  .related-product-card {
+    border: 1px solid #f0f0f0;
+    padding: 15px;
+    text-align: center;
+  }
+  .related-product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+  .related-product-card h5 {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  .related-product-card .product-price {
+    font-size: 1.2rem;
+    color: #dc3545;
+  }
+  .related-product-card .add-to-cart-btn {
+    margin-top: 10px;
+  }
+
+.cart-header {
+    margin-top: 5%;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.continue-shopping-btn {
+    display: flex;
+    align-items: center;
+    border-radius: 10px; /* Circular button */
+    padding: 10px; /* Adjust padding for size */
+    width: 300px; /* Adjust width for smaller size */
+    height: 50px; /* Adjust height for smaller size */
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #dc3545; /* Change as per your theme */
+    margin-bottom: 20px;
+}
+.amount-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between the amount and the button */
+}
+
+.amount-container .btn {
+    margin-left: 10px; /* Add some space between the amount and the button */
+}
+
+.delete-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    border-radius: 5px; /* Make the button round if desired */
+    text-decoration: none; /* Remove underline from the link */
+    color: rgb(226, 15, 15); /* Set text color */
+}
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: center;
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid #ddd;
+}
+
+.custom-table {
+    border-radius: 10px;
+    overflow: hidden; /* Ensures the border radius is visible */
+}
+
+.cart-totals {
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 20px; /* Adds padding inside the cart totals */
+    margin-bottom: 50%;
+}
+/* Resize the product image */
+.product-img {
+    width: 80px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+    vertical-align: middle; /* Align the image vertically with text */
+}
+
+/* Adjust the product text */
+.product-text {
+    font-size: 1rem; /* Adjust the font size as needed */
+    line-height: 1.5; /* Improve text readability */
+    vertical-align: middle; /* Align the text vertically with image */
+    display: inline-block; /* Allow text to sit next to the image */
+}
+
+
+
+
+/* Register form*/
+
+.Usercard {
+    width: 450px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Usercard:hover {
+    transform: scale(1.05); /* Enlarges the card slightly */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow effect */
+}
+
+.d-flex.justify-content-center.align-items-center.vh-100 {
+    height: 100vh;
+    text-align: left;
+}
+
+.d-flex.justify-content-between {
+    gap: 15px; /* Adds gap between the buttons */
+}
+
+
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+form .form-control {
+    border-radius: 5px;
+}
+
+form .btn {
+    background-color: #03920f;
+    border: none;
+}
+form .btn-danger{
+    background-color: #dc3545; /* Bootstrap red color */
+    border: none;
+}
+
+.tamco h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #6069ee;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Style for the checkbox */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #28a745;
+    cursor: pointer;
+}
+
+/* Style for the label */
+label.form-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Remove margin from label */
+label.mb-0 {
+    margin-bottom: 0;
+}
+
+.payment-method img {
+    width: 100px;
+    margin: 10px;
+}
+.checkout-header {
+    margin: 20px 0;
+}
+.checkout-form {
+    margin-top: 30px;
+}
+.order-summary {
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+.btn-continue {
+    background-color: #f44336;
+    color: white;
+}
+
+
+.Contact,
+.Information,
+.image,
+.getintouch {
+    margin-bottom: 40px;
+}
+
+.btn-contact{
+    border-style:solid;
+    border-color: #8d8282;
+    color: #000000;
+    border-radius: 8px;
+}
+.btn-contact:hover{
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+.btn-Learnmore{
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 8px;
+}
+.btn-Learnmore:hover{
+    background-color: #302d2d;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+
+/* Heading styles */
+.checkheading{
+    margin-top: 10%;
+    font-weight: bold;
+    text-align: center;
+   padding-top: 20px;
+}
+
+
+/* Contact Information section */
+.Information ul {
+    padding-left: 0;
+}
+
+.Information li {
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.Information li i {
+    margin-right: 10px;
+}
+
+/* Map image styling */
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+.getintouch form {
+    padding: 20px;
+    background-color: #faf8f8;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.getintouch .form-group {
+    margin-bottom: 20px;
+}
+
+form .btn-primary{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+}
+
+
+.payment-methods img {
+    width: 80px;
+}
+
+.form-section {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.form-section h3 {
+    margin-bottom: 20px;
+}
+
+.newsletter-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.newsletter-box h3 {
+    margin-bottom: 15px;
+}
+
+.newsletter-box .form-control {
+    margin-bottom: 10px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+/* Custom styles for input group */
+.input-group {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border-radius: 8px; /* Rounds the corners */
+    overflow: hidden; /* Ensures rounded corners are applied */
+}
+
+.input-group .form-control {
+    border: none; /* Remove default border */
+}
+
+.input-group .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/*Checkout tables*/
+/* Align labels to the left and add spacing */
+.table label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+    .form-check {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px; /* Space between rows */
+    }
+    .form-check-input {
+        margin-right: 10px; /* Space between radio button and label */
+    }
+    .form-check-label {
+        margin-bottom: 0; /* Remove bottom margin from label to align vertically with radio button */
+    }
+    table {
+        width: 100%;
+    }
+

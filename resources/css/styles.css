@@ -1,0 +1,365 @@
+/* Basic Custom Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 1.5rem;
+    color: #1220e4;
+}
+
+/* Navbar Styles */
+.navbar h1 {
+    font-size: 1.5rem;
+    color: #1220e4;
+}
+
+.navbar-nav .nav-link {
+    color: #555;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #F57224;
+}
+
+/* Primary Button Styles */
+.btn-primary {
+    background-color: #7F58AF;
+    border: none;
+}
+
+.btn-outline-dark {
+    color: #7F58AF;
+    border-color: #7F58AF;
+}
+
+.btn-outline-dark:hover {
+    background-color: #7F58AF;
+    color: #fff;
+}
+
+/* Dropdown Button Styles */
+.dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 8px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    font-weight: 500;
+    color: #555;
+}
+
+.dropdown-item:hover {
+    background-color: #7F58AF;
+    color: #fff;
+    border-radius: 3px;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 50%;
+    max-width: 600px;
+    min-width: 200px;
+}
+
+.search-bar .form-control {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.search-bar button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.search-bar .btn-primary {
+    padding: 10px 20px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-bar {
+        width: 100%;
+    }
+}
+
+
+
+/* Carousal */
+.carousel-item {
+    height: 500px; /* Fixed height for all carousel items */
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire carousel item */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Full-screen semi-transparent background */
+    text-align: center;
+    color: #fff;
+}
+
+.carousel-caption h5 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    font-size: 1.25rem;
+}
+
+/* Customizing carousel control buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-indicators button {
+    background-color: #fff;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 200px; /* Adjust to fit the product images */
+    object-fit: cover;
+}
+
+.card-body h6 {
+    font-size: 16px;
+    color: #333;
+}
+
+.card-footer {
+    background-color: #fff;
+}
+
+/* Custom Styles for Testimonials and Brands Section */
+.star-rating {
+    color: #fcd303;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.brand-logo {
+    max-height: 50px; /* Adjust based on your actual brand logo sizes */
+    padding: 5px 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+.sidebar h5, .sidebar h6 {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Adjust Input Range Thumb */
+input[type=range]::-webkit-slider-thumb {
+    background-color: #007bff;
+}
+
+/* Button Styling */
+.btn-danger {
+    background-color: #ff6b6b;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #ff4757;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-bottom: 20px;
+    }
+
+    .brand-logo {
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 150px;
+    }
+}
+
+/* Specific Styles for Sections */
+.new-arrivals {
+    margin-top: 80px; /* Adjust the value as needed */
+}
+
+.special-arrivals {
+    margin-top: 80px;
+}
+
+@media (min-width: 992px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    header {
+        display: none;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+    }
+
+    .btn-outline-dark {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+/* Footer Section Styles */
+footer {
+    padding: 40px 0; /* Adjust padding top and bottom as needed */
+    background-color: #f8f9fa;
+}
+
+footer h4,
+footer h5 {
+    font-weight: bold;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer .form-control {
+    max-width: 300px;
+}
+
+footer .btn-primary {
+    background-color: #7F58AF; /* Matching primary button color */
+    border: none;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+footer .list-unstyled a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer .list-unstyled a:hover {
+    color: #F57224;
+}
+
+footer .d-block {
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+footer .d-block:hover {
+    color: #F57224;
+}
+
+footer .text-muted {
+    font-size: 0.875rem;
+}
+
+/* Responsive padding and gap adjustments */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 0;
+    }
+
+    .form-control {
+        max-width: 100%;
+    }
+}
+
+/* Additional styling for alignment */
+form.d-flex {
+    justify-content: space-between; /* Align items in the form */
+}
+
+form .form-control {
+    margin-right: 1rem;
+}
+
+form .btn-primary {
+    margin-top: 0;
+}
+
+footer .text-center {
+    text-align: center;
+}
+
+/* Ensure gap is applied to the footer columns */
+.row.g-4 {
+    gap: 1.5rem; /* Customize the gap size as needed */
+}
+.img-container img {
+    border: 3px solid #ddd; /* Adjust the border thickness */
+    padding: 5px; /* Adjust the padding */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+}
